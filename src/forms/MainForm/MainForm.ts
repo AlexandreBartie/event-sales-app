@@ -1,6 +1,6 @@
-import { myApp } from '../../../business/myApp/myProject';
+import { myApp } from "../../application/myApp";
 
-import { SalesListPanel } from '../../panels/SalesListPanel/SalesListPanel';
+import { SalesListPanel } from "../../components/SalesListPanel/SalesListPanel";
 
 export class MainForm {
   readonly app: myApp;

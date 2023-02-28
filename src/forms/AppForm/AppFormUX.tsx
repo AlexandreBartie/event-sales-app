@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
-import { myApp } from '../../../business/myApp/myProject';
+import { myApp } from '../../application/myApp';
+
 import { MainForm } from '../MainForm/MainForm';
 
 import MainFormUX from '../MainForm/MainFormUX';
@@ -11,7 +12,7 @@ import SplashFormUX from '../SplashForm/SplashFormUX';
 export default function AppFormUX() {
   useEffect(() => {
     async function getMain() {
-      // main = new MainForm(new myApp());
+     // main = new MainForm(new myApp());
     }
     getMain().catch(console.error);
   }, []);

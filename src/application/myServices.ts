@@ -1,5 +1,5 @@
-import { DataBaseConnector } from '../../util/DBConnector';
-import { myApp } from './myProject';
+import { DataBaseConnector } from '../util/DBConnector';
+import { myApp } from './myApp';
 
 export class myServices {
   readonly DB: DataBaseConnector;
@@ -7,6 +7,4 @@ export class myServices {
   constructor(app: myApp) {
     this.DB = new DataBaseConnector(app.settings.DB);
   }
-
-
 }

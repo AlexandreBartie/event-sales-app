@@ -4,7 +4,7 @@ import React from 'react';
 import './MainForm.css';
 
 import { MainForm } from './MainForm';
-import SalesListPanelUX from '../../panels/SalesListPanel/SalesListPanelUX';
+import SalesListPanelUX from '../../components/SalesListPanel/SalesListPanelUX';
 
 export type MainFormPropTypes = { ux: MainForm };
 

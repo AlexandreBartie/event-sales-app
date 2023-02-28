@@ -1,12 +1,8 @@
 import React from "react"
 
-import * as dotenv from 'dotenv';
-
 import "./App.css"
 
-import AppFormUX from "./components/forms/AppForm/AppFormUX"
-
-dotenv.config();
+import AppFormUX from "./forms/AppForm/AppFormUX"
 
 export default function App() {
     return <AppFormUX />
