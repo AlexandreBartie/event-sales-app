@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { mmoApp } from '../../../business/ESM-App/ESM-Project';
+import { myApp } from '../../../business/myApp/myProject';
 import { MainForm } from '../MainForm/MainForm';
 
 import MainFormUX from '../MainForm/MainFormUX';
@@ -11,11 +11,11 @@ import SplashFormUX from '../SplashForm/SplashFormUX';
 export default function AppFormUX() {
   useEffect(() => {
     async function getMain() {
-      // main = new MainForm(new mmoApp());
+      // main = new MainForm(new myApp());
     }
     getMain().catch(console.error);
   }, []);
 
-  if (true) return <MainFormUX ux={new MainForm(new mmoApp())} />;
+  if (true) return <MainFormUX ux={new MainForm(new myApp())} />;
   else return <SplashFormUX />;
 }

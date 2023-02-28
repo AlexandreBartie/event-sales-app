@@ -1,15 +1,15 @@
-import { mmoApp } from '../../../business/ESM-App/ESM-Project';
+import { myApp } from '../../../business/myApp/myProject';
 
 import { SalesListPanel } from '../../panels/SalesListPanel/SalesListPanel';
 
 export class MainForm {
-  readonly app: mmoApp;
+  readonly app: myApp;
 
   readonly salesList: SalesListPanel;
 
   readonly actions: MainFormActions;
 
-  constructor(app: mmoApp) {
+  constructor(app: myApp) {
     this.app = app;
 
     this.salesList = new SalesListPanel(this);

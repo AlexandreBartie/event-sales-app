@@ -1,23 +1,20 @@
-import { mmoSettings } from "./ESM-Settings"
-import { mmoServices } from "./ESM-Services"
+import { mySettings } from './mySettings';
+import { myServices } from './myServices';
 
-export class mmoApp {
+export class myApp {
+  readonly settings: mySettings;
 
-    readonly settings: mmoSettings
+  readonly services: myServices;
 
-    readonly services: mmoServices
+  constructor() {
+    this.settings = new mySettings(this);
 
-    constructor() {
-
-        this.settings = new mmoSettings(this)
-
-        this.services = new mmoServices(this)
-    }
-
+    this.services = new myServices(this);
+  }
 }
 
 // export class mmoProject {
-//     readonly app: mmoApp
+//     readonly app: myApp
 
 //     readonly sites: mmoSites
 
@@ -41,7 +38,7 @@ export class mmoApp {
 //         return this._site !== undefined
 //     }
 
-//     constructor(app: mmoApp) {
+//     constructor(app: myApp) {
 //         this.app = app
 
 //         this.sites = new mmoSites(this)

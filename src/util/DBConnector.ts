@@ -1,21 +1,45 @@
-// import mysql, { Connection, Query } from 'mysql2';
+import mysql, { Connection } from 'mysql2';
+
+export class DataBaseSettings {
+  readonly host: string;
+  readonly user: string;
+  readonly password: string;
+  readonly database: string;
+
+  constructor(database: string, host: string, user: string, password: string) {
+    this.database = database;
+    this.host = host;
+    this.user = user;
+    this.password = password;
+  }
+}
 
 export class DataBaseConnector {
-//   private connection!: Connection;
+  private connection: Connection;
 
-//   private host!: string;
-//   private user!: string;
-//   private password!: string;
-//   private database!: string;
+  private settings: DataBaseSettings;
 
-//   public connect(): Promise<Connection> {
-//     return new Promise<Connection>((resolve, reject) => {
-//       this.connection = mysql.createConnection({
-//         host: this.host,
-//         user: this.user,
-//         password: this.password,
-//         database: this.database
-//       });
+  constructor(settings: DataBaseSettings) {
+    this.settings = settings;
+    this.connection = this.connect();
+  }
+
+  private connect(): Connection {
+    return mysql.createConnection({
+      host: this.settings.host,
+      user: this.settings.user,
+      password: this.settings.password,
+      database: this.settings.database
+    });
+  }
+
+  public execute(sql: string, args = []) {
+    this.connection.query(sql, args, function (err, results, fields) {
+      console.log(results); // results contains rows returned by server
+      console.log(fields); // fields contains extra meta data about results, if available
+    });
+  }
+}
 
 //       this.connection.connect((error: any) => {
 //         if (error) {
@@ -64,4 +88,3 @@ export class DataBaseConnector {
 //       }
 //     });
 //   }
-}
