@@ -1,0 +1,24 @@
+.SplashForm-Title
+{
+    background: burlywood;
+    padding: 80px;
+    margin:50px auto;
+    max-width: 800px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px white;
+}
+
+.SplashForm-Title h3
+{
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.SplashForm-Title h5
+{
+    font-size: 60px;
+    text-align: center;
+    color: brown;
+
+}

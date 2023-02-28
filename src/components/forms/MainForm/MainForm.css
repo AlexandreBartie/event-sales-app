@@ -1,0 +1,37 @@
+.MainForm
+{
+    background: gray;
+    padding: 5px;
+    margin:5px auto;
+    max-width: 1800px;
+    border-radius: 20px;
+    box-shadow: 0 0 150px G;
+}
+
+.MainForm-Header
+{
+    padding: 3px;
+    margin:3px auto;
+}
+
+.MainForm-Footer
+{
+    background: grey;
+    padding: 30px;
+    margin:20px auto;
+    border-radius: 50px;
+    box-shadow: 0 0 20px white;
+}
+
+.MainForm-Center, .MainForm-Left, .MainForm-Right
+{
+    background: gray;
+    padding: 5px;
+    margin:5px auto;
+    width: 99%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px white;
+}
+
+
+

@@ -1,0 +1,1 @@
+docker exec mysql-event-sales /usr/bin/mysqldump -uroot --password=senha EventSales > backups\0001-backup.sql
