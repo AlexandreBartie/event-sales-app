@@ -11,7 +11,7 @@ services:
       - --collation-server=utf8mb4_unicode_ci
       - --innodb_force_recovery=0
     volumes: 
-      - C:\DEVOPS\BARTIE\event-sales-app\database\:/var/lib/mysql
+      - C:\DEVOPS\BARTIE\event-sales-app\dat\database\:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
